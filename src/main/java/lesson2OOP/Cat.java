@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2OOP;
 
 public class Cat {
     private String name;
