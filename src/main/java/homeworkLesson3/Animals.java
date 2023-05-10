@@ -6,12 +6,41 @@ public class Animals {
     protected String name;
     protected int swimLimit;
     protected int runLimit;
+    private static int countAnimals;
+    private static int countCats;
+    private static int countDogs;
+
 
     // constructor
     public Animals(String name, int swimLimit, int runLimit) {
         this.name = name;
         this.swimLimit = swimLimit;
         this.runLimit = runLimit;
+        countAnimals++;
+    }
+
+    /**
+     *  getters to call and two methods for the counter itself
+     * @return count
+     */
+    public static int getCountAnimals() {
+        return countAnimals;
+    }
+
+    public static int getCountCats() {
+        return countCats;
+    }
+
+    public static int getCountDogs() {
+        return countDogs;
+    }
+
+    public static void increaseCatCount() {
+        countCats++;
+    }
+
+    public static void increaseDogCount() {
+        countDogs++;
     }
 
     /**

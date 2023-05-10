@@ -15,11 +15,18 @@ public class HWLesson3 {
      */
     public static void main(String[] args) {
         // add animals to array
-        Animals[] animals = {new Dog("Jora"),new Cat("Mars")};
+        Animals[] animals = {new Dog("Jora"),new Cat("Mars"),new Cat("Mara"),new Dog("Tuzik")};
         // loop them out through the object and call methods
         for (int i = 0; i < animals.length; i++) {
             animals[i].run(300);
             animals[i].swim(800);
+            animals[i].run(100);
+            animals[i].swim(5);
+
+            System.out.println("Total animals created: " + Animals.getCountAnimals());
+            System.out.println("Total cats created: " + Animals.getCountCats());
+            System.out.println("Total dogs created: " + Animals.getCountDogs());
+
         }
 
     }
