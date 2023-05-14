@@ -1,71 +1,48 @@
 package homeworkLesson3;
 
-public class Animals {
-
-    //field class
-    protected String name;
-    protected int swimLimit;
+abstract public class Animals implements Action{
     protected int runLimit;
-    private static int countAnimals;
-    private static int countCats;
-    private static int countDogs;
+    protected int swimLimit;
+    protected String className;
+    private static int countOfAnimals;
 
+    static {
+        countOfAnimals = 0;
+    }
 
-    // constructor
-    public Animals(String name, int swimLimit, int runLimit) {
-        this.name = name;
-        this.swimLimit = swimLimit;
+    public Animals(int runLimit, int swimLimit) {
         this.runLimit = runLimit;
-        countAnimals++;
+        this.swimLimit = swimLimit;
+        this.className = getClass().getSimpleName();
+        countOfAnimals++;
     }
 
-    /**
-     *  getters to call and two methods for the counter itself
-     * @return count
-     */
-    public static int getCountAnimals() {
-        return countAnimals;
+    public String getClassName() {
+        return className;
     }
 
-    public static int getCountCats() {
-        return countCats;
+    public static int getCountOfAnimals() {
+        return countOfAnimals;
     }
 
-    public static int getCountDogs() {
-        return countDogs;
-    }
-
-    public static void increaseCatCount() {
-        countCats++;
-    }
-
-    public static void increaseDogCount() {
-        countDogs++;
-    }
-
-    /**
-     * method to implement swimming
-     * @param distance parameter that we set for the correct solution of the problem
-     */
-    public void swim(int distance){
-        if (swimLimit == 0){        // condition check
-            System.out.println("can't swim");
-        } else if (swimLimit >= distance) {
-            System.out.println(name + " swam the distance " + distance);
-        }else {
-            System.out.println(name + " could not swim the distance " + distance);
-        }
-    }
-
-    /**
-     * method to implement running
-     * @param distance parameter that we set for the correct solution of the problem
-     */
-    public void run(int distance){
-        if(runLimit >= distance){       // condition check
-            System.out.println(name + " ran the distance " + distance);
+    public String run(int distance) {
+        if (distance > swimLimit) {
+            return className + " couldn't swim " + distance;
         } else {
-            System.out.println(name + " couldn't run the distance " + distance);
+            return className + " successfully swim " + distance;
         }
+    }
+
+    public String swim(int distance) {
+        if (distance > swimLimit){
+            return className + " couldn't swim " + distance;
+        } else {
+            return className + " successfully swim " + distance;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return className + ". run limit: " + runLimit + ". swim limit" + swimLimit;
     }
 }

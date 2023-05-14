@@ -1,4 +1,4 @@
-package lesson2OOP;
+package lesson2_OOP;
 
 public class Cat {
     private String name;
@@ -20,7 +20,7 @@ public class Cat {
         this.name = name;
     }
 
-    String voice() {         // метод заставляет кота мяукать, метод возвращает "звук"
+    public String voice() {         // метод заставляет кота мяукать, метод возвращает "звук"
         return "meow";
     }
 
