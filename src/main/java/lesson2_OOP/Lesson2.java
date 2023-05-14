@@ -1,4 +1,4 @@
-package lesson2OOP;
+package lesson2_OOP;
 
 /*
 Теория:
@@ -13,6 +13,10 @@ package lesson2OOP;
     Геттер - обращается к полю, вызывает его - public String getName() - не имеет аргументов, делает return
     Сеттер - дает возможность изменить поле -  public void setName(String name) - имеет аргумент, ничего не возвращает
 
+    implements -
+    extends -
+
+    В Java нет множественного насследования!
  */
 
 
