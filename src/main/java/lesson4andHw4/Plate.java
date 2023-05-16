@@ -8,7 +8,6 @@ public class Plate {
     public int getFood() {
         return food;
     }
-
     public void decreaseFood(int food) {
         if (this.food >= food) {    // проверяем хватает ли еды в тарелке
             this.food -= food;  //this.food -= this.food -food;
