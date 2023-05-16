@@ -10,8 +10,6 @@ public class Cat {
         this.fullness = false;
     }
 
-
-
     public void eat(Plate plate) {
         if (plate.getFood() >= appetite && !fullness) {
             plate.decreaseFood(appetite);       // в аргумент класса передали обьект тарелки и вызвали обьект и всего методы в этом методе)
