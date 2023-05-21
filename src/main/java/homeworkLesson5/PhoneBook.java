@@ -21,9 +21,5 @@ public class PhoneBook {
     public List<Integer> get(String name) {
         return phoneBook.get(name);
     }
-
-    public Map<String, List<Integer>> fidnAll() {
-        return phoneBook;
-    }
 }
 
