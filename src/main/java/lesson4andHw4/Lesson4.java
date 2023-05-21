@@ -10,10 +10,7 @@ public class Lesson4 {
     public static void main(String[] args) {
         Cat[] cats = {new Cat(10), new Cat(5), new Cat(15)};
         Plate plate = new Plate(25);
-<<<<<<< HEAD
-=======
 
->>>>>>> 041d9753b4e49e3d96183085682477984f02cfbd
         for (Cat cat : cats){
             cat.eat(plate);
             System.out.println(cat);
