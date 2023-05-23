@@ -2,6 +2,12 @@ package homeworkLesson6;
 
 import java.lang.reflect.Array;
 
+/**
+ * Homework JavaPro
+ * Mosiuk Vladislav
+ * 19.05.23
+ */
+
 public class Homework {
     public static void main(String[] args) {
         Implementation implementation = new Implementation();
